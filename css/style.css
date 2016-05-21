@@ -17,25 +17,14 @@ html{
 
 body{
 	text-align: center;
-  background-color: purple; /*page background color */
-}
+  background-color: #7A1EA1;/*page background color */
 
-header { /* remove after project submission */
-  background-color: #FFED74;
-}
-
-section { /* remove after project submission */
-  background-color: #FFE2B8;
-}
-
-article { /* remove after project submission */
-  background-color: #E89C6C;
 }
 
 a
 {
   text-decoration: none;
-  color: #232323;
+  color: white;
   transition: color 0.3s ease;
 }
 
@@ -54,7 +43,6 @@ ul{
 nav ul{
 	position: fixed; /* makes nav sticky */
   background-color:  #333333;
-  background-color: #E8C66A; /* remove after project submission */
   top: 0;
   width: 100%;
   padding: 1% 0;
@@ -86,7 +74,7 @@ p{
 }
 
 .profile-photo{
-  border-radius: 50% /* creates rounded corners vs squared corners */
+  border-radius: 50%; /* creates rounded corners vs squared corners */
 }
 
 .section-title{
@@ -97,7 +85,7 @@ p{
 }
 
 .section-content{
-	color: #B7695C;
+  color: #FFE2B8;
   font-family: 'Merriweather', serif; 
   font-size: 1rem;
 	font-weight: semi-bold;
@@ -106,7 +94,7 @@ p{
 }
 
 .skills{
-  background-color: #7A1EA1;
+  background-color: purple;
   height: 100%;
   text-align: center;
 }
@@ -126,7 +114,7 @@ p{
 }
 
 .projects{
-  background-color: orange;
+  background-color: #FF957E;
   height: 100%;
   padding: 5% 0 0 0;
   text-align: center;
@@ -141,7 +129,6 @@ p{
 .footer{
   font-size: 3rem;
   background-color: #333333;
-  background-color: #FF957E; /* remove after project submission */
   text-align: center;
   padding: 0 0 5% 0;
 }
@@ -166,37 +153,6 @@ p{
 	font-style: italic;
 	color: #51A39D;
   padding: 0% 0 5% 0;
-}
-
-/*remove after assignment is turned in
-*/
-#left{
-  background-color: #FFB7CF;
-  border: 1px black solid;
-  padding: 20px;
-  float: left;
-  width: 30%;
-}
-
-/*remove after assignment is turned in
-*/
-#right {
-    background-color: #E55B88;
-    border: 1px black solid;
-    padding: 20px;
-    float: right;   
-    width: 62%;
-}
-
-/*remove after assignment is turned in
-*/
-.clearfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
 }
 
 /* MOBILE MENU */
@@ -234,7 +190,7 @@ p{
 }
 
 
- /*Just a quick hamburger*/
+ /* Hamburger Menu*/
 
 #menuToggle span
 {
@@ -327,9 +283,97 @@ p{
   transform: scale(1.0, 1.0);
   opacity: 1;
 }
+/********************************************
+*       FLEXBOX                             *
+*********************************************/
+.wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column wrap;
+    -moz-flex-flow: column wrap;
+    flex-flow: column wrap;
+    -webkit-align-content: space-between;
+    -moz-align-content: space-between;
+    align-content: space-between;
+    -ms-flex-line-pack: justify;
+    height: 1500px;
+    width: 100%;
+    padding: 30px;
+  }
+  .wrapper .block {
+    width: 31.5%;
+    position: relative;
+    margin: 2% 0 2% 0;
+  }
+  /* Overlay Text */
+  .wrapper .block .content {
+    display: block;
+    margin: 0;
+    padding: 5px 15px 15px 15px;
+    background: #333333;
+    color: #51A39D;
+    width: 100%;
+    opacity: 0;
+    height: 100%;
+    position: absolute;
+    top:0;
+  }
+  .wrapper .block .content h2, .wrapper .block .content p {
+    text-align: center;
+    position: relative;
+    top:50%;
+  }
 
-/*Mobile Design*/
-@media all and (max-width: 400px) 
+  .wrapper .block .content:hover {
+    opacity: .9;
+  }
+
+  .block .content {
+  -webkit-transition: all 300ms ease-out;  
+    -moz-transition: all 300ms ease-out;  
+    -o-transition: all 300ms ease-out;  
+    -ms-transition: all 300ms ease-out;  
+    transition: all 300ms ease-out;
+  transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+}
+
+
+/********************************************
+*           Mobile Design                   *
+**********************************************/
+
+
+@media all and (max-width: 1020px) 
+{ 
+  .wrapper {
+      height: 1200px;
+  }
+}
+ 
+@media all and (max-width: 820px) 
+{ 
+  .wrapper {
+    display:block;
+    width: 100%;
+    padding: 30px;
+  }
+
+  .wrapper .block {
+    width: 100%;
+    position: relative;
+  }
+  .projects {
+    height: 3200px;
+  }
+
+} 
+@media all and (max-width: 768px) 
 { 
   
   #mobileMenu {
@@ -345,51 +389,9 @@ p{
     width: 100%;
     position: fixed;
   }
+
+  #menu{
+    background: transparent;
+  }
 }
-
-.wrapper {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column wrap;
-  -moz-flex-flow: column wrap;
-  flex-flow: column wrap;
-  -webkit-align-content: space-between;
-  -moz-align-content: space-between;
-  align-content: space-between;
-  -ms-flex-line-pack: justify;
-  height: 2000px;
-  padding: 30px;
-}
-.wrapper .block {
-  width: 31.5%;
-  margin: 0 0 30px 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-.wrapper .block img {
-  width: 100%;
-  display: block;
-}
-.wrapper .block .content {
-  display: block;
-  margin: 0;
-  padding: 5px 15px 15px 15px;
-  background: #f8f8f8;
-}
-
-
-
-
-
-
-
-
-
-
-
-
+ 
