@@ -86,90 +86,93 @@
   </section>
 
   <!--Projects-->
-<section class="row projects" id="projects">
-  <h2 class="section-title">Projects</h2>
-  <div class="wrapper">
-    <div class="block">
-        <img class="img-full" src="images/Test_1.jpg">
+<div class="projects-wrapper">  
+  <section class="row projects" id="projects">
+    <!-- <button id=“btn-photo”>Photo</button> -->
+    <h2 class="section-title">Projects</h2>
+    <div class="wrapper">
+      <div class="block">
+          <img class="img-full" src="images/Test_1.jpg">
+          <div class="content">
+            <h2>Some title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur</p>
+          </div>
+      </div>
+
+      <div class="block">
+        <img class="img-full" src="http://placehold.it/350x220">
+        <div class="content">
+            <h2>Some title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur</p>
+          </div>
+      </div>
+      
+      <div class="block">
+        <img class="img-full" src="http://placehold.it/350x300">
         <div class="content">
           <h2>Some title</h2>
           <p>Lorem ipsum dolor sit amet, consectetur</p>
         </div>
-    </div>
-
-    <div class="block">
-      <img class="img-full" src="http://placehold.it/350x220">
-      <div class="content">
+      </div>
+      
+      <div class="block">
+        <img class="img-full" src="images/Test_2.jpg">
+        <div class="content">
           <h2>Some title</h2>
           <p>Lorem ipsum dolor sit amet, consectetur</p>
         </div>
-    </div>
-    
-    <div class="block">
-      <img class="img-full" src="http://placehold.it/350x300">
-      <div class="content">
-        <h2>Some title</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur</p>
       </div>
-    </div>
-    
-    <div class="block">
-      <img class="img-full" src="images/Test_2.jpg">
-      <div class="content">
-        <h2>Some title</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur</p>
+      
+      <div class="block">
+        <img class="img-full" src="http://placehold.it/350x300">
+        <div class="content">
+          <h2>Some title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur</p>
+        </div>
       </div>
-    </div>
-    
-    <div class="block">
-      <img class="img-full" src="http://placehold.it/350x100">
-      <div class="content">
-        <h2>Some title</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur</p>
+      
+      <div class="block">
+        <img class="img-full" src="http://placehold.it/350x230">
+        <div class="content">
+          <h2>Some title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur</p>
+        </div> 
       </div>
-    </div>
-    
-    <div class="block">
-      <img class="img-full" src="http://placehold.it/350x230">
-      <div class="content">
-        <h2>Some title</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur</p>
-      </div> 
-    </div>
 
-    <div class="block">
-      <img class="img-full" src="http://placehold.it/350x150">
-      <div class="content">
-        <h2>Some title</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur</p>
+      <div class="block">
+        <img class="img-full" src="http://placehold.it/350x350">
+        <div class="content">
+          <h2>Some title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur</p>
+        </div>
+      </div>
+      
+      <div class="block">
+       <img class="img-full" src="images/TEst_3.png" alt="Karma Landing Page Clone">
+        <div class="content">
+          <h2>Some title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur</p>
+        </div>
+      </div>
+      
+      <div class="block">
+        <img class="img-full" src="http://placehold.it/350x300">
+        <div class="content">
+          <h2>Some title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur</p>
+        </div>
+      </div>
+      
+      <div class="block">
+        <img class="img-full" src="http://placehold.it/350x350">
+        <div class="content">
+          <h2>Some title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur</p>
+        </div>
       </div>
     </div>
-    
-    <div class="block">
-     <img class="img-full" src="images/TEst_3.png" alt="Karma Landing Page Clone">
-      <div class="content">
-        <h2>Some title</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur</p>
-      </div>
-    </div>
-    
-    <div class="block">
-      <img class="img-full" src="http://placehold.it/350x100">
-      <div class="content">
-        <h2>Some title</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur</p>
-      </div>
-    </div>
-    
-    <div class="block">
-      <img class="img-full" src="http://placehold.it/350x350">
-      <div class="content">
-        <h2>Some title</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur</p>
-      </div>
-    </div>
+  </section>
 </div>
-</section>
 
 
 <!--Contact Info-->
@@ -203,6 +206,11 @@ $(function() {
   $("#menu li a").click(function(){
     console.log('menu item click');
     $("input").prop("checked",false);
+  });
+
+  $( "#btn-photo" ).click(function() {   
+console.log("photo button clicked");
+    $(".photo").siblings().hide(); 
   });
 });
 </script> 
